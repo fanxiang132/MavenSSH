@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.fanx.template.domain.basedata.Privilege">
+		<id name="id" length="10">
+			<generator class="increment"></generator>
+		</id>
+		<property name="name" length="50" ></property>
+		<property name="ptype" length="2" ></property>
+		<property name="url" length="200" ></property>
+		<property name="pid" length="10"></property>
+		<property name="isparent"></property>
+		<property name="icon" length="200"></property>
+		<property name="isdelete" ></property>
+	</class>
+</hibernate-mapping>

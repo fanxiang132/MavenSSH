@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.fanx.template.domain.basedata.IPControl">
+		<id name="id" length="10">
+			<generator class="increment"></generator>
+		</id>
+		<property name="startIP" length="50" ></property>
+		<property name="endIP" length="50"></property>
+		<property name="remark" length="200"></property>
+	</class>
+</hibernate-mapping>

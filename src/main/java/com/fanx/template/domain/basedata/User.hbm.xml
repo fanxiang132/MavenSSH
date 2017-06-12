@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.fanx.template.domain.basedata.User">
+		<id name="uid" length="10">
+			<generator class="increment"></generator>
+		</id>
+		<property name="realname" length="20" ></property>
+		<property name="username" length="100"></property>
+		<property name="password" length="100"></property>
+		<property name="bodyid" length="100"></property>
+		<property name="age" length="5"></property>
+		<property name="birthday" length="20"></property>
+		<property name="address" length="200"></property>
+		<property name="email" length="50"></property>
+		<property name="sex" length="10"></property>
+		<property name="bodyimage" length="50"></property>
+		<property name="state"></property>
+		<property name="token" length="200"></property>
+		<property name="sendtime" length="50"></property>
+		<property name="isactivate" length="10"></property>
+		<property name="addtime" length="50"></property>
+		
+		<set name="roles" table="user_role">
+			<key>
+				<column name="uid" />
+			</key>
+			<many-to-many column="rid" class="com.fanx.template.domain.basedata.Role"/>
+		</set>
+	</class>
+</hibernate-mapping>

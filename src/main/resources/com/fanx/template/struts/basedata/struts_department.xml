@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	 <package name="departmentjson" namespace="/" extends="json-default">
+	 	<action name="departmentjson_*" class="DepartmentAction" method="{1}">
+	 		<result type="json"></result>
+	 	</action>
+	 </package>
+	 
+	 <package name="department" namespace="/" extends="struts-default">
+	 	<action name="department_*" class="DepartmentAction" method="{1}">
+	 		<result name="listui">/WEB-INF/jsp/basedata/department/list.jsp</result>
+	 	</action>
+	 </package>
+</struts>

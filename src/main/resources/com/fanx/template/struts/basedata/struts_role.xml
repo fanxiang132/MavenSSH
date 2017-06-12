@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	 <package name="role" namespace="/" extends="struts-default">
+	 	<action name="role_*" class="RoleAction" method="{1}">
+	 		<!-- 添加成功到角色列表页 -->
+	 		<result name="list">/WEB-INF/jsp/basedata/role/list.jsp</result>
+	 		<!-- 跳转到修改的UI -->
+	 		<result name="updateUI">/WEB-INF/jsp/basedata/role/update.jsp</result>
+	 		<!-- 跳转到添加UIaddSuccess -->
+	 		<result name="addUI">/WEB-INF/jsp/basedata/role/add.jsp</result>
+	 		<!--添加角色成功 -->
+	 		<result name="addSuccess" type="redirectAction">
+	 			role_findAllRolesByPages.action
+	 		</result>
+	 	</action>
+	 </package>
+</struts>
